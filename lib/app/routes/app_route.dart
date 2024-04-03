@@ -6,6 +6,7 @@ abstract class _Paths{
     static const main = '/main';
     static const settings = '/settings';
     static const initialRoute =  '/initialroute';
+    static const kellyCalculator = '/kellyCalculator';
 }
 
 abstract class Routes{
@@ -13,4 +14,5 @@ abstract class Routes{
   static const initialRoute = _Paths.initialRoute;
   static const main = _Paths.main;
   static const settings = _Paths.settings;
+  static const kellyCalculator = _Paths.kellyCalculator;
 }

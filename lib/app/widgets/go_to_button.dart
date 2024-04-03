@@ -14,7 +14,7 @@ class GoToButton extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.fromLTRB(0,20,0,0),
       child: GestureDetector(
-        onTap: () => function,
+        onTap: () => function(),
         child: Container(
           decoration: BoxDecoration(
             color: AppColors.activeIconColor,

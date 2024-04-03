@@ -62,7 +62,7 @@ class AppTexts extends Text {
         maxLines: 1,
       );
 
-  factory AppTexts.typeOfCalcText(String text, Color color) => AppTexts(
+  factory AppTexts.typeOfCalc(String text, Color color) => AppTexts(
         text,
         fontSize: 18,
         fontWeight: FontWeight.w400,
@@ -70,7 +70,7 @@ class AppTexts extends Text {
         textAlign: TextAlign.left,
         maxLines: 1,
       );
-  factory AppTexts.smallResText(String text, Color color) => AppTexts(
+  factory AppTexts.smallRes(String text, Color color) => AppTexts(
     text,
     fontSize: 15,
     fontWeight: FontWeight.w400,
@@ -91,4 +91,65 @@ class AppTexts extends Text {
         textAlign: TextAlign.center,
         maxLines: 1,
       );
+
+  factory AppTexts.form(
+      String text, {
+        Color color = AppColors.formulaCardTextColor,
+      }) =>
+      AppTexts(
+        text,
+        fontSize: 18,
+        fontWeight: FontWeight.w600,
+        color: color,
+        textAlign: TextAlign.center,
+        maxLines: 1,
+      );
+
+  factory AppTexts.formDescCard(
+      String text, {
+        Color color = AppColors.formulaCardTextColor,
+      }) =>
+      AppTexts(
+        text,
+        fontSize: 12,
+        fontWeight: FontWeight.w600,
+        color: color,
+        textAlign: TextAlign.left,
+        maxLines: 8,
+      );
+
+  factory AppTexts.titleOfClub(String text) => AppTexts(
+    text,
+    fontSize: 14,
+    fontWeight: FontWeight.w500,
+    color: Colors.white,
+    textAlign: TextAlign.center,
+    maxLines: 1,
+  );
+  factory AppTexts.score(String text) => AppTexts(
+    text,
+    fontSize: 50,
+    fontWeight: FontWeight.w500,
+    color: Colors.white,
+    textAlign: TextAlign.center,
+    maxLines: 1,
+  );
+
+  factory AppTexts.lowCardMatch(String text) => AppTexts(
+    text,
+    fontSize: 12,
+    fontWeight: FontWeight.w300,
+    color: Colors.white,
+    textAlign: TextAlign.center,
+    maxLines: 1,
+  );
+
+  factory AppTexts.inputDescription(String text) => AppTexts(
+    text,
+    fontSize: 12,
+    fontWeight: FontWeight.w300,
+    color: AppColors.unactiveIconColor,
+    textAlign: TextAlign.center,
+    maxLines: 1,
+  );
 }
