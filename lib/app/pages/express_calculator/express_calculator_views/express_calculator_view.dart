@@ -22,7 +22,7 @@ class ExpressCalculatorView extends GetView<ExpressCalculatorController> {
                 Container(
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(50),
-                    color: AppColors.kellyCriterionColor,
+                    color: AppColors.orangeColor,
                   ),
                   padding: EdgeInsets.all(8),
                   child: Row(
@@ -49,14 +49,13 @@ class ExpressCalculatorView extends GetView<ExpressCalculatorController> {
                   height: 20,
                 ),
                 Visibility(
-                  visible: controller.isNotCalculated.value,
+                  visible: !controller.isSecondPage.value &&
+                      !controller.isThirdPage.value,
                   child: Column(
                     children: [
                       CalculatorsTextfield(
-                          controller: controller.outcomes,
-                          function: (){}),
-                      AppTexts.inputDescription(
-                          'Outcomes (max 10)'),
+                          controller: controller.outcomes, function: () {}),
+                      AppTexts.inputDescription('Outcomes (max 10)'),
                       SizedBox(
                         height: 20,
                       ),
@@ -70,18 +69,21 @@ class ExpressCalculatorView extends GetView<ExpressCalculatorController> {
                     ],
                   ),
                 ),
-                Expanded(
-                  child: Container(),
-                ),
                 Visibility(
-                  visible: !controller.isNotCalculated.value,
+                  visible: controller.isSecondPage.value,
                   child: Column(
                     children: [
-                      ResultTextfield(controller: controller.bankrollAmountController),
-                      AppTexts.inputDescription('Cash out'),
-                      SizedBox(
-                        height: 20,
+                      controller.factorsOfWinning(
+                        int.parse(controller.outcomes.value.text),
                       ),
+                    ],
+                  ),
+                ),
+                Visibility(
+                  visible: controller.isThirdPage.value,
+                  child: Column(
+                    children: [
+                      ResultTextfield(controller: controller.possible_winning)
                     ],
                   ),
                 ),
@@ -89,15 +91,20 @@ class ExpressCalculatorView extends GetView<ExpressCalculatorController> {
                   child: Container(),
                 ),
                 Visibility(
-                    visible: !controller.isNotCalculated.value,
+                    visible: controller.isSecondPage.value,
+                    child: GoToButton(
+                        function: controller.calculate, text: 'NEXT')),
+                Visibility(
+                    visible: controller.isThirdPage.value,
                     child: GoToButton(
                         function: controller.returnData, text: 'MENU')),
                 Obx(
                   () => controller.isFieldsNotEmpty.value
                       ? Visibility(
-                          visible: controller.isNotCalculated.value,
+                          visible: !controller.isSecondPage.value &&
+                              !controller.isThirdPage.value,
                           child: GoToButton(
-                              function: controller.calculate, text: 'NEXT'))
+                              function: controller.showFactors, text: 'NEXT'))
                       : Padding(
                           padding: const EdgeInsets.fromLTRB(0, 20, 0, 0),
                           child: Container(

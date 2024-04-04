@@ -19,6 +19,7 @@ class CalculatorsPageView extends GetView<CalculatorPageController> {
             totalAM: controller.lastResultTotalAM.value,
             percentage: controller.lastResultPersantageOfBank.value,
             lastTest: controller.titleOfLast.value,
+            resultOfExpress: controller.resultOfExpress.value,
           ),
           SizedBox(
             height: 20,

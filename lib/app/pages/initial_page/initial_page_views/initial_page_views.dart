@@ -52,9 +52,9 @@ class InitialPageView extends GetView<InitialPageController> {
                       BottomNavigationBarItem(
                           icon: Icon(Icons.sports_football), label: ''),
                       BottomNavigationBarItem(
-                          icon: Icon(Icons.sports_football), label: ''),
+                          icon: Icon(Icons.calculate_outlined), label: ''),
                       BottomNavigationBarItem(
-                          icon: Icon(Icons.sports_football), label: ''),
+                          icon: Icon(Icons.settings), label: ''),
                     ],
                   ),
                 ),
