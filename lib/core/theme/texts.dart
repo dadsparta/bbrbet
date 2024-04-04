@@ -124,7 +124,7 @@ class AppTexts extends Text {
     fontWeight: FontWeight.w500,
     color: Colors.white,
     textAlign: TextAlign.center,
-    maxLines: 1,
+    maxLines: 2,
   );
   factory AppTexts.score(String text) => AppTexts(
     text,
@@ -150,6 +150,23 @@ class AppTexts extends Text {
     fontWeight: FontWeight.w300,
     color: AppColors.unactiveIconColor,
     textAlign: TextAlign.center,
+    maxLines: 1,
+  );
+
+  factory AppTexts.splashScreenTitle(String text) => AppTexts(
+    text,
+    fontSize: 50,
+    fontWeight: FontWeight.w500,
+    color: Colors.white,
+    textAlign: TextAlign.left,
+    maxLines: 2,
+  );
+  factory AppTexts.splashScreenDescription(String text) => AppTexts(
+    text,
+    fontSize: 18,
+    fontWeight: FontWeight.w600,
+    color: AppColors.activeIconColor,
+    textAlign: TextAlign.left,
     maxLines: 1,
   );
 }

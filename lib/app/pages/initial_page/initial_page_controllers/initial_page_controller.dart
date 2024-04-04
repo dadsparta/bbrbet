@@ -6,7 +6,6 @@ class InitialPageController extends GetxController{
   final selectedPageIndex = 0.obs;
 
   void onSelectPage(int index) {
-    print('SSSSSSSSS');
     pageController.animateToPage(
       index,
       duration: const Duration(milliseconds: 100),

@@ -8,12 +8,12 @@ import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class InitialPageView extends GetView<InitialPageController> {
-  final pages = [MainView(), CalculatorsPageView(), SettingsPageView()];
-
   InitialPageView({super.key});
 
   @override
   Widget build(BuildContext context) {
+    final pages = [MainView(), CalculatorsPageView(), SettingsPageView()];
+
     return Obx(
       () => Scaffold(
         body: Stack(

@@ -1,4 +1,4 @@
-import 'package:bbrbet/app/pages/kelly_calculator_page/kelly_calculator_controllers/kelly_calculator_controller.dart';
+import 'package:bbrbet/app/pages/kelly_calculator/kelly_calculator_controllers/kelly_calculator_controller.dart';
 import 'package:bbrbet/app/widgets/go_to_button.dart';
 import 'package:bbrbet/app/widgets/result_textfield.dart';
 import 'package:bbrbet/app/widgets/textfield_for_calculators.dart';

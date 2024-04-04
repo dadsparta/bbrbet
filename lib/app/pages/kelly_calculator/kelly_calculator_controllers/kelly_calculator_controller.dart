@@ -45,7 +45,8 @@ class KellyCalculatorController extends GetxController {
     print('Returning data...');
       Get.back(result: [
         cashOutController.value.text,
-        percentageController.value.text
+        percentageController.value.text,
+        'KELLY CRITERION FORMULA'
       ]);
   }
 }

@@ -16,8 +16,10 @@ class CalculatorsPageView extends GetView<CalculatorPageController> {
         physics: NeverScrollableScrollPhysics(),
         children: [
           LastResultWidget(
-              totalAM: controller.lastResultTotalAM.value,
-              percentage: controller.lastResultPersantageOfBank.value),
+            totalAM: controller.lastResultTotalAM.value,
+            percentage: controller.lastResultPersantageOfBank.value,
+            lastTest: controller.titleOfLast.value,
+          ),
           SizedBox(
             height: 20,
           ),
@@ -50,8 +52,8 @@ class CalculatorsPageView extends GetView<CalculatorPageController> {
                       ' involves multiple events simultaneously.'
                       ' To win, all included bets must succeed;'
                       ' if one bet is refunded, the express still stands.',
-                  function: () {},
-                  index: 1,
+                  function: () => controller.goToExpressPage,
+                  index: 2,
                   color: AppColors.orangeColor,
                 ),
               ],

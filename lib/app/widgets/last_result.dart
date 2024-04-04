@@ -6,7 +6,8 @@ import 'package:get/get.dart';
 class LastResultWidget extends StatefulWidget {
   final String totalAM;
   final String percentage;
-  const LastResultWidget({super.key, required this.totalAM, required this.percentage});
+  final String lastTest;
+  const LastResultWidget({super.key, required this.totalAM, required this.percentage, required this.lastTest});
 
   @override
   State<LastResultWidget> createState() => _LastResultWidgetState();
@@ -31,7 +32,7 @@ class _LastResultWidgetState extends State<LastResultWidget> {
                 SizedBox(
                   width: 8,
                 ),
-                AppTexts.typeOfCalc('Kelly Criterion', AppColors.greyColor)
+                AppTexts.typeOfCalc(widget.lastTest, AppColors.greyColor)
               ],
             ),
             SizedBox(
